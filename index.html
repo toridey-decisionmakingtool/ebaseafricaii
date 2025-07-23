@@ -1,0 +1,304 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tori Dey Decision Making Tool</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <img src="banner.png" alt="Banner" class="banner" />
+    <h1>Tori Dey Decision Making Tool</h1>
+    <div class="language-toggle">
+      <button onclick="setLanguage('en')">English</button>
+      <button onclick="setLanguage('fr')">Français</button>
+    </div>
+  </header>
+  <main>
+    <form id="storyForm" action="https://formspree.io/f/xblkjnad" method="POST">
+      <!-- ENGLISH FORM -->
+      <div data-lang="en">
+        <label>Email: <input type="email" name="email" required /></label>
+        <label>Country: <input type="text" name="country" /></label>
+        <label>Organization or Institution: <input type="text" name="organization" /></label>
+
+        <label>Who is your primary audience?
+          <select name="audience[]" multiple>
+            <option disabled selected>No response</option>
+            <option>Policymakers</option>
+            <option>Practitioners</option>
+            <option>People</option>
+            <option>Researchers</option>
+            <option>Donors/Funders/Dev agencies</option>
+          </select>
+        </label>
+
+        <label>Apart from your primary audience, are there any additional groups or stakeholders you are aiming to reach?
+          <input type="text" name="additional_audience" />
+        </label>
+
+        <label>What do you want the story to be about?
+          <select name="story_about[]" multiple id="storyAbout">
+            <option disabled selected>No response</option>
+            <option>The approach and methodology we employed/the way we did our work</option>
+            <option>The way we worked and the results</option>
+            <option>The impact of our work on People’s lives</option>
+            <option>How scientific data can elicit artistic creativity</option>
+          </select>
+        </label>
+
+        <label>What message do you want to convey?
+          <select name="message[]" multiple>
+            <option disabled selected>No response</option>
+            <option>Getting evidence on what works is a complex/interesting/challenging process</option>
+            <option>There is results that you can use for decision-making.</option>
+            <option>Lives can be impacted if effective interventions are used</option>
+            <option>Policies need to be more evidence-informed.</option>
+            <option>Practice needs to be more evidence-informed.</option>
+            <option>People need to make evidence-based choices</option>
+          </select>
+        </label>
+
+        <label>Is there any other message you would like to convey?
+          <input type="text" name="additional_message" />
+        </label>
+
+        <label>Why do you want to tell this story?
+          <select name="reason[]" multiple>
+            <option disabled selected>No response</option>
+            <option>Improve knowledge</option>
+            <option>Change behavior towards uptake of effective intervention</option>
+            <option>To stimulate investments</option>
+            <option>To stimulate community engagement</option>
+            <option>To change workplace culture towards evidence-based practice</option>
+          </select>
+        </label>
+
+        <label>Are there other reasons why you want to tell this story?
+          <input type="text" name="additional_reason" />
+        </label>
+
+        <label>How do you want to tell this story?
+          <select name="means[]" multiple>
+            <option disabled selected>No response</option>
+            <option>Online (using digital platforms – social media, blogs)</option>
+            <option>Television</option>
+            <option>Radio</option>
+            <option>In-person meetings</option>
+            <option>On stage performance</option>
+          </select>
+        </label>
+
+        <label>Are there other means through which you would like to tell this story?
+          <input type="text" name="additional_means" />
+        </label>
+
+        <label>When do you want to tell this story?
+          <select name="when">
+            <option disabled selected>No response</option>
+            <option>Today</option>
+            <option>Within a month</option>
+            <option>Within 6 months</option>
+            <option>Within 12 months</option>
+          </select>
+        </label>
+
+        <label>What specific time do you want to tell this story?
+          <input type="text" name="specific_time" />
+        </label>
+
+        <label>Any events or seasons you are targeting?
+          <select name="season[]" multiple>
+            <option disabled selected>No response</option>
+            <option>Harvest season</option>
+            <option>Rainy seasons</option>
+            <option>Winter</option>
+            <option>Summer</option>
+            <option>After exams in school</option>
+          </select>
+        </label>
+
+        <label>Are there other event(s) you are targeting?
+          <input type="text" name="additional_season" />
+        </label>
+
+        <label>Where do you want to tell this story?
+          <select name="location[]" multiple>
+            <option disabled selected>No response</option>
+            <option>City hall</option>
+            <option>Village Square</option>
+            <option>Market place</option>
+            <option>Parliament building</option>
+            <option>School</option>
+            <option>Church</option>
+            <option>Conference</option>
+          </select>
+        </label>
+
+        <label>Where else do you want to tell this story?
+          <input type="text" name="additional_location" />
+        </label>
+
+        <button type="submit">Submit</button>
+      
+<div data-lang="fr" style="display:none;">
+  <label>Email : <input type="email" name="email" required /></label>
+  <label>Pays : <input type="text" name="country" /></label>
+  <label>Organisation ou institution : <input type="text" name="organization" /></label>
+
+  <label>Quel est votre public principal ?
+    <select name="audience[]" multiple>
+      <option disabled selected>Aucune réponse</option>
+      <option>Décideurs politiques</option>
+      <option>Praticiens</option>
+      <option>Population</option>
+      <option>Chercheurs</option>
+      <option>Bailleurs de fonds/Agences de développement</option>
+    </select>
+  </label>
+
+  <label>En dehors de votre public principal, y a-t-il d'autres groupes ou parties prenantes que vous souhaitez atteindre ?
+    <input type="text" name="additional_audience" />
+  </label>
+
+  <label>De quoi voulez-vous que l'histoire parle ?
+    <select name="story_about[]" multiple id="storyAboutFr">
+      <option disabled selected>Aucune réponse</option>
+      <option>L’approche et la méthodologie utilisées/le mode de fonctionnement</option>
+      <option>La manière dont nous avons travaillé et les résultats obtenus</option>
+      <option>L’impact de notre travail sur la vie des personnes</option>
+      <option>Comment les données scientifiques peuvent susciter la créativité artistique</option>
+    </select>
+  </label>
+
+  <label>Quel message souhaitez-vous transmettre ?
+    <select name="message[]" multiple>
+      <option disabled selected>Aucune réponse</option>
+      <option>Obtenir des preuves sur ce qui fonctionne est un processus complexe/intéressant/stimulant</option>
+      <option>Il y a des résultats que vous pouvez utiliser pour la prise de décision</option>
+      <option>Des vies peuvent être transformées si des interventions efficaces sont mises en œuvre</option>
+      <option>Les politiques doivent être plus fondées sur des preuves</option>
+      <option>Les pratiques doivent être plus fondées sur des preuves</option>
+      <option>Les gens doivent faire des choix basés sur des preuves</option>
+    </select>
+  </label>
+
+  <label>Y a-t-il un autre message que vous souhaitez transmettre ?
+    <input type="text" name="additional_message" />
+  </label>
+
+  <label>Pourquoi voulez-vous raconter cette histoire ?
+    <select name="reason[]" multiple>
+      <option disabled selected>Aucune réponse</option>
+      <option>Améliorer les connaissances</option>
+      <option>Changer le comportement en faveur de l’adoption d’interventions efficaces</option>
+      <option>Stimuler les investissements</option>
+      <option>Encourager l’engagement communautaire</option>
+      <option>Changer la culture du lieu de travail vers des pratiques fondées sur les preuves</option>
+    </select>
+  </label>
+
+  <label>Y a-t-il d'autres raisons pour lesquelles vous souhaitez raconter cette histoire ?
+    <input type="text" name="additional_reason" />
+  </label>
+
+  <label>Comment souhaitez-vous raconter cette histoire ?
+    <select name="means[]" multiple>
+      <option disabled selected>Aucune réponse</option>
+      <option>En ligne (réseaux sociaux, blogs)</option>
+      <option>Télévision</option>
+      <option>Radio</option>
+      <option>Réunions en personne</option>
+      <option>Performance sur scène</option>
+    </select>
+  </label>
+
+  <label>Y a-t-il d'autres moyens par lesquels vous aimeriez raconter cette histoire ?
+    <input type="text" name="additional_means" />
+  </label>
+
+  <label>Quand souhaitez-vous raconter cette histoire ?
+    <select name="when">
+      <option disabled selected>Aucune réponse</option>
+      <option>Aujourd'hui</option>
+      <option>Dans un mois</option>
+      <option>Dans 6 mois</option>
+      <option>Dans 12 mois</option>
+    </select>
+  </label>
+
+  <label>À quel moment précis souhaitez-vous raconter cette histoire ?
+    <input type="text" name="specific_time" />
+  </label>
+
+  <label>Y a-t-il des événements ou des saisons que vous ciblez ?
+    <select name="season[]" multiple>
+      <option disabled selected>Aucune réponse</option>
+      <option>Saison des récoltes</option>
+      <option>Saison des pluies</option>
+      <option>Hiver</option>
+      <option>Été</option>
+      <option>Après les examens scolaires</option>
+    </select>
+  </label>
+
+  <label>Y a-t-il d'autres événements que vous ciblez ?
+    <input type="text" name="additional_season" />
+  </label>
+
+  <label>Où souhaitez-vous raconter cette histoire ?
+    <select name="location[]" multiple>
+      <option disabled selected>Aucune réponse</option>
+      <option>Mairie</option>
+      <option>Place du village</option>
+      <option>Marché</option>
+      <option>Bâtiment du parlement</option>
+      <option>École</option>
+      <option>Église</option>
+      <option>Conférence</option>
+    </select>
+  </label>
+
+  <label>Où d'autre souhaitez-vous raconter cette histoire ?
+    <input type="text" name="additional_location" />
+  </label>
+
+  <button type="submit">Soumettre</button>
+</div>
+</div>
+    </form>
+
+    <div id="recommendation" class="hidden"></div>
+  </main>
+  <script>
+    const setLanguage = (lang) => {
+      document.querySelectorAll('[data-lang]').forEach(el => {
+        el.style.display = el.getAttribute('data-lang') === lang ? 'block' : 'none';
+      });
+    };
+    setLanguage('en');
+
+    document.getElementById('storyForm').addEventListener('submit', function(event) {
+      event.preventDefault();
+      const selected = Array.from(document.getElementById('storyAbout').selectedOptions).map(opt => opt.value);
+      let message = "Thank you for submitting your responses. eBASE Africa has received your submission and will work with you to bring your story to life.<br><br>";
+
+      if (selected.includes("The approach and methodology we employed/the way we did our work")) {
+        message += "<strong>Recommended Story Type: Process Story</strong>";
+      } else if (selected.includes("The way we worked and the results")) {
+        message += "<strong>Recommended Story Type: Narrative Story</strong>";
+      } else if (selected.includes("The impact of our work on People’s lives")) {
+        message += "<strong>Recommended Story Type: Impact Story</strong>";
+      } else if (selected.includes("How scientific data can elicit artistic creativity")) {
+        message += "<strong>Recommended Story Type: Creative Story</strong>";
+      }
+
+      document.getElementById('recommendation').innerHTML = message;
+      document.getElementById('recommendation').classList.remove('hidden');
+      setTimeout(() => event.target.submit(), 2000);
+    });
+  </script>
+</body>
+</html>
